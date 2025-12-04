@@ -1,7 +1,7 @@
-guiletally - tagline of your project
-======================================
+guiletally - statistical tally for r7rs
+=======================================
 
-Description of guiletally.
+The goal: https://github.com/johnwcowan/r7rs-work/blob/master/TallyCowan.md
 
 See NEWS for user-visible changes.
 See ChangeLog or the history for detailed changes.
