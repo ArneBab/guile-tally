@@ -9,7 +9,17 @@ define-module : run-guiletally
   . #:export : main
 
 import : guiletally guiletally
+         only (rnrs io ports) eof-object
+         ice-9 format
 
 define : main args
-  guiletally
+  define tally : make-tally
+  for-each tally : map 1+ : iota 500
+  let : : state : tally : eof-object
+      for-each
+          lambda : f
+              format #t "~s: ~a \n"
+                  procedure-name f
+                  f state
+          list tally-count tally-product tally-sum tally-sum-squares tally-max tally-min tally-range tally-mean tally-standard-deviation tally-geometric-mean
 
